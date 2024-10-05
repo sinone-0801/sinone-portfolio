@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シノンのポートフォリオ</title>
+    <title>Dr. シノンのポートフォリオ - 生物学者 & エンジニア</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>シノンのポートフォリオ</h1>
+        <h1>Dr. シノンのポートフォリオ</h1>
+        <p class="subtitle">生物学者 × フリーランスエンジニア</p>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#ai-gallery">AI Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -22,35 +24,77 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>生物学研究とプログラミングの世界を融合させ、革新的なソリューションを生み出すことに情熱を注いでいます。</p>
+            <img src="ai-generated-portrait.jpg" alt="AI生成によるシノンの肖像画" class="profile-image">
+            <p>博士（学術）を生物学（進化・共生）の研究で取得し、有名大学で勤務する傍ら、フリーランスエンジニアとして活動しています。生物学の知見とプログラミングスキルを融合させ、革新的なソリューションを生み出すことに情熱を注いでいます。</p>
+            <p>将来の目標は、より良いインターネットコミュニティを形成するシステムの開発です。生物の共生システムから学んだ知見を活かし、人々がより健全に交流できる場を創造したいと考えています。</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>生物学研究（共生・進化）</li>
-                <li>Web開発</li>
-                <li>AI導入</li>
-                <li>SNSボット開発</li>
-            </ul>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>研究スキル</h3>
+                    <ul>
+                        <li>進化生物学</li>
+                        <li>共生システム解析</li>
+                        <li>データ分析・統計</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>プログラミング</h3>
+                    <ul>
+                        <li>Web開発（HTML, CSS, JavaScript）</li>
+                        <li>Python</li>
+                        <li>機械学習・AI実装</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>その他</h3>
+                    <ul>
+                        <li>SNSボット開発</li>
+                        <li>生成AI活用</li>
+                        <li>科学コミュニケーション</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
                 <h3>進化シミュレーター</h3>
-                <p>生物の進化プロセスを視覚化するインタラクティブなWebアプリケーション</p>
+                <img src="evolution-simulator.jpg" alt="進化シミュレーターのスクリーンショット" class="project-image">
+                <p>生物の進化プロセスを視覚化するインタラクティブなWebアプリケーション。ユーザーが環境パラメータを調整し、種の進化をリアルタイムで観察できます。</p>
             </div>
             <div class="project">
                 <h3>AI搭載SNSボット</h3>
-                <p>機械学習を活用して、ユーザーとリアルタイムで対話するSNSボット</p>
+                <img src="ai-bot.jpg" alt="AI搭載SNSボットのイメージ" class="project-image">
+                <p>機械学習を活用して、ユーザーとリアルタイムで対話するSNSボット。自然言語処理技術を用いて、ユーザーの興味に合わせた情報提供や対話を行います。</p>
+            </div>
+            <div class="project">
+                <h3>バイオミメティクス・デザインツール</h3>
+                <img src="biomimetics-tool.jpg" alt="バイオミメティクス・デザインツールのインターフェース" class="project-image">
+                <p>生物の適応戦略をエンジニアリングに応用するためのデザインツール。生物学的データベースとAIを組み合わせ、革新的な製品デザインのアイデアを生成します。</p>
+            </div>
+        </section>
+
+        <section id="ai-gallery">
+            <h2>AI Generated Gallery</h2>
+            <p>生成AIを使用して作成した画像ギャラリーです。生物学とテクノロジーの融合を視覚的に表現しています。</p>
+            <div class="gallery">
+                <img src="ai-image1.jpg" alt="AIで生成した生物学とテクノロジーの融合イメージ1">
+                <img src="ai-image2.jpg" alt="AIで生成した生物学とテクノロジーの融合イメージ2">
+                <img src="ai-image3.jpg" alt="AIで生成した生物学とテクノロジーの融合イメージ3">
+                <img src="ai-image4.jpg" alt="AIで生成した生物学とテクノロジーの融合イメージ4">
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
+            <p>プロジェクトの依頼や共同研究のご提案など、お気軽にお問い合わせください。</p>
             <form id="contact-form">
-                <input type="email" placeholder="あなたのメールアドレス" required>
+                <input type="text" placeholder="お名前" required>
+                <input type="email" placeholder="メールアドレス" required>
                 <textarea placeholder="メッセージ" required></textarea>
                 <button type="submit">送信</button>
             </form>
@@ -58,7 +102,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 サイケデリック・ポップ ポートフォリオ</p>
+        <p>&copy; 2024 Dr. シノン - 生物学者 & エンジニア</p>
     </footer>
 
     <script src="script.js"></script>
