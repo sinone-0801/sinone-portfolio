@@ -26,8 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('メッセージが送信されました！（実際の送信処理は実装されていません）');
-        contactForm.reset();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const mailtoLink = `mailto:something.sinone@gmail.com?subject=ポートフォリオからのお問い合わせ&body=名前: ${encodeURIComponent(name)}%0D%0Aメールアドレス: ${encodeURIComponent(email)}%0D%0A%0D%0Aメッセージ:%0D%0A${encodeURIComponent(message)}`;
+
+        window.location.href = mailtoLink;
     });
 
     // サイケデリックな背景アニメーション
