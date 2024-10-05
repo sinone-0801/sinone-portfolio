@@ -22,24 +22,30 @@ body {
 
 header {
     background-color: var(--color-secondary);
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-shadow: 2px 2px var(--color-accent);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
 }
 
 nav ul li a {
@@ -72,8 +78,49 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-category {
+    flex-basis: calc(33.333% - 1rem);
+    margin-bottom: 1rem;
+}
+
 .project {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 form {
@@ -110,11 +157,12 @@ footer {
     background-color: var(--color-secondary);
 }
 
-@keyframes psychedelic {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-}
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
 
-body {
-    animation: psychedelic 20s linear infinite;
+    .skill-category {
+        flex-basis: 100%;
+    }
 }
