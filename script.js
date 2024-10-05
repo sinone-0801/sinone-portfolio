@@ -22,26 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // コンタクトフォームの送信処理
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', (e) => {
+    // Formspreeを使用したフォーム送信
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const status = document.createElement('div');
+        status.classList.add('form-status');
+        form.appendChild(status);
 
-        const mailtoLink = `mailto:something.sinone@gmail.com?subject=ポートフォリオからのお問い合わせ&body=名前: ${encodeURIComponent(name)}%0D%0Aメールアドレス: ${encodeURIComponent(email)}%0D%0A%0D%0Aメッセージ:%0D%0A${encodeURIComponent(message)}`;
-
-        window.location.href = mailtoLink;
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                status.innerHTML = "ありがとうございます！メッセージが送信されました。";
+                form.reset();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        status.innerHTML = "申し訳ありませんが、エラーが発生しました。後でもう一度お試しください。";
+                    }
+                });
+            }
+        }).catch(error => {
+            status.innerHTML = "申し訳ありませんが、エラーが発生しました。後でもう一度お試しください。";
+        });
     });
-
-    // サイケデリックな背景アニメーション
-    const body = document.body;
-    let hue = 0;
-    function animateBackground() {
-        hue = (hue + 1) % 360;
-        body.style.filter = `hue-rotate(${hue}deg)`;
-        requestAnimationFrame(animateBackground);
-    }
-    animateBackground();
 });

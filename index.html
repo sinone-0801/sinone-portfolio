@@ -86,16 +86,18 @@
                 <img src="img2.jpg" alt="AIで生成したイメージ2">
                 <img src="img3.jpg" alt="AIで生成したイメージ3">
                 <img src="img4.jpg" alt="AIで生成したイメージ4">
+                <img src="img5.jpg" alt="AIで生成したイメージ5">
+                <img src="img6.jpg" alt="AIで生成したイメージ6">
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <p>プロジェクトの依頼や共同研究のご提案など、お気軽にお問い合わせください。</p>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="お名前" required>
-                <input type="email" id="email" placeholder="メールアドレス" required>
-                <textarea id="message" placeholder="メッセージ" required></textarea>
+            <form id="contact-form" action="https://formspree.io/f/あなたのFormspree用ID" method="POST">
+                <input type="text" name="name" placeholder="お名前" required>
+                <input type="email" name="email" placeholder="メールアドレス" required>
+                <textarea name="message" placeholder="メッセージ" required></textarea>
                 <button type="submit">送信</button>
             </form>
         </section>
