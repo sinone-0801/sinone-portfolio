@@ -69,13 +69,13 @@ const TEMPLATE = {
                 <h3>マルチトラックオーディオミキサ</h3>
                 <img src="multi-track-player.png" alt="オーディオミキサのインターフェース" class="project-image">
                 <p>複数のオーディオファイルを web ブラウザで同時に、独立して再生可能です。さらにループ機能や、再ループまでの待機時間設定なども実装。</p>
-                <a href="https://{{name_short}}.github.io/multi-track-player" target="_blank" class="project-link">マルチトラックオーディオミキサを使う</a>
+                <a href="https://sinone-0801.github.io/multi-track-player" target="_blank" class="project-link">マルチトラックオーディオミキサを使う</a>
             </div>
             <div class="project">
                 <h3>ビジュアルWeb辞書</h3>
                 <img src="dictionary-ui.png" alt="ぱらぱらめくれるオンライン辞書のインターフェース" class="project-image">
                 <p>実際の本をめくるような体験を提供するオンライン辞書UI。アニメーションとインタラクティブな要素を組み合わせ、直感的な操作感を実現しています。</p>
-                <a href="https://{{name_short}}.github.io/visual-web-dictionary/" target="_blank" class="project-link">ビジュアルWeb辞書を見る</a>
+                <a href="https://sinone-0801.github.io/visual-web-dictionary/" target="_blank" class="project-link">ビジュアルWeb辞書を見る</a>
             </div>
             <div class="project">
                 <h3>Discord 連携 e-ラーニングシステム</h3>
