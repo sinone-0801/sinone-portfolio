@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://sinone-0801.github.io/sinone-portfolio/sitemap.xml
+
+# Google Specific
+User-agent: Googlebot
+Allow: /
