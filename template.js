@@ -98,6 +98,7 @@ const TEMPLATE = {
         <section id="ai-gallery">
             <h2>AI Generated Gallery</h2>
             <p>生成AIを使用して作成した画像ギャラリーです。</p>
+            <h3>※無断で使ってOK！でも営利利用（お金に関わる利用）はしないでね！</h3>
             <div class="gallery">
                 <div class="gallery-item" onclick="openModal('images/img1.png', 'サンプル画像1')">
                     <img src="images/img1.png" alt="AIで生成したイメージ1">
