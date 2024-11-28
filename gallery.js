@@ -1,25 +1,84 @@
+const ITEMS_PER_PAGE = 20; // 1ページあたりの表示数
+let currentPage = 1;
+let loading = false;
+
 // ギャラリーの初期化
 function initializeGallery() {
     const galleryContainer = document.querySelector('.gallery');
-    GALLERY_ITEMS.forEach(item => {
-        const galleryItem = createGalleryItem(item);
-        galleryContainer.appendChild(galleryItem);
-    });
+    
+    // 最初のページを読み込み
+    loadGalleryPage(currentPage);
+    
+    // Intersection Observerの設定
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !loading) {
+                currentPage++;
+                loadGalleryPage(currentPage);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    // 監視要素の追加
+    const sentinel = document.createElement('div');
+    sentinel.id = 'sentinel';
+    galleryContainer.appendChild(sentinel);
+    observer.observe(sentinel);
 }
 
-// ギャラリーアイテムの作成
+// ページ単位でギャラリーアイテムを読み込む
+function loadGalleryPage(page) {
+    loading = true;
+    const galleryContainer = document.querySelector('.gallery');
+    const start = (page - 1) * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    const items = GALLERY_ITEMS.slice(start, end);
+    
+    if (items.length === 0) {
+        loading = false;
+        return;
+    }
+    
+    items.forEach(item => {
+        const galleryItem = createGalleryItem(item);
+        galleryContainer.insertBefore(galleryItem, document.getElementById('sentinel'));
+    });
+    
+    loading = false;
+}
+
+// ギャラリーアイテムの作成（Lazy Loading対応）
 function createGalleryItem(item) {
     const div = document.createElement('div');
     div.className = 'gallery-item';
     div.onclick = () => openModal(item.src, item.title);
     
     div.innerHTML = `
-        <img src="${item.src}" alt="${item.title}">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="${item.src}"
+             alt="${item.title}"
+             loading="lazy">
         <div class="overlay">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
         </div>
+        <div class="loading-placeholder"></div>
     `;
+    
+    // 画像の遅延読み込み
+    const img = div.querySelector('img');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+                img.onload = () => {
+                    div.querySelector('.loading-placeholder').style.display = 'none';
+                };
+            }
+        });
+    });
+    observer.observe(img);
     
     return div;
 }
