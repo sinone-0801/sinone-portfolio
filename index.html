@@ -3,46 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ポートフォリオサイト。これまでの実績やプロジェクトを紹介しています。">
-    <meta name="keywords" content="ポートフォリオ, 実績, プロジェクト, ウェブ開発, デザイン">
-    <meta name="author" content="sinone">
-    <title>ポートフォリオ</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Dr. シノン のポートフォリオ | 生物学者 × フリーランスエンジニア</title>
+    <meta name="title" content="Dr. シノン のポートフォリオ | 生物学者 × フリーランスエンジニア">
+    <meta name="description" content="生物学の博士号を持つエンジニアのポートフォリオサイト。AI・機械学習を活用したWeb開発、SNSボット開発、研究支援システムの開発など、生物学とプログラミングを融合させた革新的なソリューションを提供しています。">
+    <meta name="keywords" content="ポートフォリオ, Web開発, AI開発, 機械学習, Python, JavaScript, 生物学, 進化学, 共生, SNSボット, シノン, 研究支援">
+    <meta name="author" content="Dr. シノン">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinone-0801.github.io/sinone-portfolio/">
+    <meta property="og:title" content="Dr. シノン のポートフォリオ | 生物学者 × フリーランスエンジニア">
+    <meta property="og:description" content="生物学の博士号を持つエンジニアのポートフォリオサイト。AI・機械学習を活用したWeb開発、SNSボット開発、研究支援システムの開発など、生物学とプログラミングを融合させた革新的なソリューションを提供しています。">
+    <meta property="og:image" content="https://sinone-0801.github.io/sinone-portfolio/images/ogp.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sinone-0801.github.io/sinone-portfolio/">
+    <meta property="twitter:title" content="Dr. シノン のポートフォリオ | 生物学者 × フリーランスエンジニア">
+    <meta property="twitter:description" content="生物学の博士号を持つエンジニアのポートフォリオサイト。AI・機械学習を活用したWeb開発、SNSボット開発、研究支援システムの開発など、生物学とプログラミングを融合させた革新的なソリューションを提供しています。">
+    <meta property="twitter:image" content="https://sinone-0801.github.io/sinone-portfolio/images/ogp.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery-styles.css">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sinone-0801.github.io/sinone-portfolio/">
 </head>
 <body>
-    <!-- 言語切替ボタン -->
-    <!-- <div class="language-switch">
-        <button onclick="switchLanguage('ja')">日本語</button>
-        <button onclick="switchLanguage('en')">English</button>
-    </div> -->
-
     <div id="content">
-        <!-- コンテンツはJavaScriptで動的に挿入されます -->
+        <noscript>
+            <p>このサイトではJavaScriptを使用しています。より良い体験のために、JavaScriptを有効にしてください。</p>
+        </noscript>
         Loading...
     </div>
 
+    <!-- Scripts -->
     <script src="config.js"></script>
     <script src="template.js"></script>
     <script src="modal.js"></script>
     <script src="main.js"></script>
+    
+    <!-- Structured Data -->
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "sinone",
-          "url": "https://sinone-0801.github.io/sinone-portfolio/",
-          "sameAs": [
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dr. シノン",
+        "alternateName": "sinone",
+        "url": "https://sinone-0801.github.io/sinone-portfolio/",
+        "image": "https://sinone-0801.github.io/sinone-portfolio/images/ogp.png",
+        "sameAs": [
             "https://x.com/happy_sinone",
             "https://bsky.app/profile/sinone.bsky.social",
             "https://bsky.app/profile/sinone-jr.bsky.social",
-            "https://github.com/sinone-0801",
-            "https://sinone-0801.github.io/visual-web-dictionary/dictionary.html",
-            "https://sinone-0801.github.io/multi_track_player/"
-          ],
-          "jobTitle": "Web Developer",
-          "description": "ポートフォリオサイト。これまでの実績やプロジェクトを紹介しています。"
-        }
+            "https://github.com/sinone-0801"
+        ],
+        "jobTitle": ["Biologist", "Web Developer"],
+        "description": "生物学の博士号を持つエンジニア。AI・機械学習を活用したWeb開発、SNSボット開発、研究支援システムの開発を行っています。",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "日本の研究大学"
+        },
+        "knowsAbout": [
+            "Web Development",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Biology",
+            "Evolution",
+            "Symbiosis",
+            "Python Programming",
+            "JavaScript"
+        ],
+        "hasOccupation": [
+            {
+                "@type": "Occupation",
+                "name": "Biologist",
+                "description": "進化・共生の研究を行う生物学者"
+            },
+            {
+                "@type": "Occupation",
+                "name": "Web Developer",
+                "description": "AI・機械学習を活用したWeb開発エンジニア"
+            }
+        ],
+        "workExample": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "シノンJr.",
+                "applicationCategory": "SNSボット",
+                "url": "https://bsky.app/profile/sinone-jr.bsky.social"
+            },
+            {
+                "@type": "WebSite",
+                "name": "ビジュアルWeb辞書",
+                "url": "https://sinone-0801.github.io/visual-web-dictionary/dictionary.html"
+            },
+            {
+                "@type": "WebApplication",
+                "name": "マルチトラックオーディオミキサ",
+                "url": "https://sinone-0801.github.io/multi_track_player/"
+            }
+        ]
+    }
     </script>
 </body>
 </html>
