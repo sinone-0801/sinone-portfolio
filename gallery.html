@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI生成ギャラリー - ポートフォリオ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery-styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI生成ギャラリー</h1>
+        <p class="subtitle">AI生成作品集</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">ポートフォリオに戻る</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gallery">
+            <div class="gallery">
+                <!-- ギャラリーアイテムはJavaScriptで動的に生成されます -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <a id="downloadBtn" href="" download class="download-btn">画像をダウンロード</a>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="gallery-data.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
