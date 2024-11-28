@@ -69,7 +69,7 @@ const TEMPLATE = {
                 <h3>マルチトラックオーディオミキサ</h3>
                 <img src="multi-track-player.png" alt="オーディオミキサのインターフェース" class="project-image">
                 <p>複数のオーディオファイルを web ブラウザで同時に、独立して再生可能です。さらにループ機能や、再ループまでの待機時間設定なども実装。</p>
-                <a href="https://sinone-0801.github.io/multi-track-player" target="_blank" class="project-link">マルチトラックオーディオミキサを使う</a>
+                <a href="https://sinone-0801.github.io/multi_track_player" target="_blank" class="project-link">マルチトラックオーディオミキサを使う</a>
             </div>
             <div class="project">
                 <h3>ビジュアルWeb辞書</h3>
